@@ -1,0 +1,117 @@
+[
+    {
+        "input_dataset": {
+            "bucket": "public",
+            "dataset_hash": "4ce458d60e68a743c0b57860ef433270",
+            "dataset_key": "/home/sagemaker-user/BigDataSys-Project8/delaney_curated.csv",
+            "dataset_metadata": {},
+            "dataset_oid": null,
+            "datastore": false,
+            "external_export_parameters": {
+                "result_dir": "/home/sagemaker-user/BigDataSys-Project8"
+            },
+            "feature_transform_type": "normalization",
+            "id_col": "compound_id",
+            "production": false,
+            "response_cols": [
+                "VALUE_NUM_mean"
+            ],
+            "response_transform_type": "normalization",
+            "smiles_col": "rdkit_smiles"
+        },
+        "label": "best",
+        "metrics_type": "training",
+        "model_uuid": "3e8d9014-a6f8-4df7-9742-2f4260aab150",
+        "prediction_results": {
+            "mae_score": 0.3283320719549405,
+            "mean_response_vals": [
+                -2.8720952914798206
+            ],
+            "num_compounds": 892,
+            "r2_score": 0.9455634533670467,
+            "rms_score": 0.4808646711801065,
+            "std_response_vals": [
+                2.060998082284315
+            ]
+        },
+        "subset": "train",
+        "time_run": 1708991569.6613529
+    },
+    {
+        "input_dataset": {
+            "bucket": "public",
+            "dataset_hash": "4ce458d60e68a743c0b57860ef433270",
+            "dataset_key": "/home/sagemaker-user/BigDataSys-Project8/delaney_curated.csv",
+            "dataset_metadata": {},
+            "dataset_oid": null,
+            "datastore": false,
+            "external_export_parameters": {
+                "result_dir": "/home/sagemaker-user/BigDataSys-Project8"
+            },
+            "feature_transform_type": "normalization",
+            "id_col": "compound_id",
+            "production": false,
+            "response_cols": [
+                "VALUE_NUM_mean"
+            ],
+            "response_transform_type": "normalization",
+            "smiles_col": "rdkit_smiles"
+        },
+        "label": "best",
+        "metrics_type": "training",
+        "model_uuid": "3e8d9014-a6f8-4df7-9742-2f4260aab150",
+        "prediction_results": {
+            "mae_score": 1.3246914652792643,
+            "mean_response_vals": [
+                -3.767794642857143
+            ],
+            "model_choice_score": 0.2946707749852221,
+            "num_compounds": 112,
+            "r2_score": 0.2946707749852221,
+            "rms_score": 1.6800684954037384,
+            "std_response_vals": [
+                2.0004654196782417
+            ]
+        },
+        "subset": "valid",
+        "time_run": 1708991569.661358
+    },
+    {
+        "input_dataset": {
+            "bucket": "public",
+            "dataset_hash": "4ce458d60e68a743c0b57860ef433270",
+            "dataset_key": "/home/sagemaker-user/BigDataSys-Project8/delaney_curated.csv",
+            "dataset_metadata": {},
+            "dataset_oid": null,
+            "datastore": false,
+            "external_export_parameters": {
+                "result_dir": "/home/sagemaker-user/BigDataSys-Project8"
+            },
+            "feature_transform_type": "normalization",
+            "id_col": "compound_id",
+            "production": false,
+            "response_cols": [
+                "VALUE_NUM_mean"
+            ],
+            "response_transform_type": "normalization",
+            "smiles_col": "rdkit_smiles"
+        },
+        "label": "best",
+        "metrics_type": "training",
+        "model_uuid": "3e8d9014-a6f8-4df7-9742-2f4260aab150",
+        "prediction_results": {
+            "mae_score": 1.2854630438157082,
+            "mean_response_vals": [
+                -3.7820357142857146
+            ],
+            "num_compounds": 112,
+            "r2_score": 0.38324066577563565,
+            "rms_score": 1.665997952264946,
+            "std_response_vals": [
+                2.121370854493838
+            ]
+        },
+        "subset": "test",
+        "time_run": 1708991569.6613588
+    }
+]
