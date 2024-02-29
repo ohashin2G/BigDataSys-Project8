@@ -176,7 +176,8 @@ def Train(net, train_graphs, train_labels, valid_graphs, valid_labels, learning_
           (BestEpoch, BestTrainMAE, BestTrainRMSE, BestTrainR2, BestTrainCC, BestValidMAE, BestValidRMSE, BestValidR2, BestValidCC))
 
     model = BestModel
-    th.save(model.state_dict(), './models/'+'solubNet'+str(fold+1)+'.pt')
+    # Save the best model from that specific fold
+    th.save(model.state_dict(), '/home/sagemaker-user/BigDataSys-Project8/SolubNet/SolubNetD/models/'+'solubNet'+str(fold+1)+'.pt')
     
 
 
@@ -204,7 +205,7 @@ num_features = 4
 num_labels = 1
 feature_str = "h"
 device = th.device("cuda:0" if th.cuda.is_available() else "cpu")
-InputFile = "./dataset/Delaney144.csv"
+InputFile = "/home/sagemaker-user/BigDataSys-Project8/SolubNet/SolubNetD/dataset/Delaney1144.csv" # give full path 
 data = Utility.LoadGaoData(InputFile, num_features, feature_str, device)
 
 random.seed(42)
@@ -225,8 +226,8 @@ name = ['smiles', 'LogS']
 df_train = pd.DataFrame(columns=name, data=TrainDataset)
 df_valid = pd.DataFrame(columns=name, data=validDataset)
 
-df_train.to_csv('dataset/DelaneyTrain.csv', index=False)
-df_valid.to_csv('dataset/DelaneyTest.csv', index=False)
+df_train.to_csv('/home/sagemaker-user/BigDataSys-Project8/SolubNet/SolubNetD/dataset/DelaneyTrain.csv', index=False)
+df_valid.to_csv('/home/sagemaker-user/BigDataSys-Project8/SolubNet/SolubNetD/dataset/DelaneyTest.csv', index=False)
 
 random.shuffle(data_train)
 
@@ -235,6 +236,7 @@ train_labels = th.tensor([gx[2] for gx in data_train]).to(device)
 valid_graphs = [gx[1] for gx in data_test]
 valid_labels = th.tensor([gx[2] for gx in data_test]).to(device)
 
+print("Training Started ...")
 
 for fold, (train_idx, val_idx) in enumerate(skf.split(train_graphs, train_labels)):
     print('**' * 10, fold + 1, ' fold ing....', '**' * 10)
