@@ -1,0 +1,9 @@
+# To use:
+#   $ conda env create -f environment.yml
+#   $ conda activate solub_net_env
+name: solub_net_env
+dependencies:
+  - python=3.8
+  - ipykernel
+  - ipywidgets
+  - pip
