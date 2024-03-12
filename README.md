@@ -19,7 +19,7 @@ This project aims to explore the impact of fusion voting on third-party viabilit
 ## AWS Process
 Our team will be performing data wrangling, big data storage and retrieval from Athena using the Amazon Athena Query Engine, and Amazon Redshift Data Warehouse to produce custom visualizations and Amazon QuickSight. Our end goal deliverable is three types of visualizations – time-series visualization, state-by-state visualization, third party comparison visualization.
 
-![Data Visualization](images/Data Visualization.png "Data Visualization")
+![Data Visualization](images/Data%20Visualization.png)
 
 ## Repository Contents
 - **Data:** This folder contains the raw data obtained from FEC and MIT sources.
